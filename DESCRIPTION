@@ -1,0 +1,22 @@
+Package: iplespBib
+Title: Manage Iplesp Bibliography database
+Version: 0.1.0
+Authors@R: 
+    person(given = "Turbelin",
+           family = "Clément",
+           role = c("aut", "cre"),
+           email = "clement.turbelin@upmc.fr",
+           comment = c(ORCID = "0000-0002-5074-9541"))
+Description: What the package does (one paragraph).
+License: CC BY 4.0
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
+Imports: 
+    curl,
+    jsonlite,
+    rlang,
+	dplyr,
+	tidyr,
+	rappdirs
