@@ -10,6 +10,6 @@ Load Bibliography database from Iplesp Database}
 What the package does (one paragraph).
 }
 \author{
-\strong{Maintainer}: Turbelin ClÃ©ment \email{clement.turbelin@upmc.fr} (\href{https://orcid.org/0000-0002-5074-9541}{ORCID})
+\strong{Maintainer}: Turbelin Clément \email{clement.turbelin@upmc.fr} (\href{https://orcid.org/0000-0002-5074-9541}{ORCID})
 
 }
