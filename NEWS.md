@@ -1,0 +1,8 @@
+# iplespBib 0.2.0
+
+* add `pubweb_add_team_columns()`
+* Update team list (ERES becomes ESSMA)
+
+# iplespBib 0.1.0
+
+* Initial version
