@@ -59,6 +59,7 @@ recode_team = function(x) {
 #' @param .db data.frame() of publication (returned by pubweb_load_db() or a subset)
 #' @param recode if TRUE numerical team id will be recoded to factor
 #' @return data.frame(pub_id, team)
+#' @export
 pubweb_teams = function(.db, recode=TRUE) {
   hh = tidyr::unnest(.db[, c('id','equipes')], cols='equipes')
   hh = hh %>% dplyr::rename(team=equipes, pub_id=id)
@@ -66,5 +67,29 @@ pubweb_teams = function(.db, recode=TRUE) {
     hh$team = recode_team(hh$team)
   }
   hh
-
 }
+
+#' Extract teams attached of each publication and add a corresponding logical column for each team
+#' @param .db data.frame() of publication with at least columns `id` and `equipes`
+#' @param recode if TRUE team label will be used (from `recode_team`) instead of team id
+#' @param col_prefix prefix to add to the team label (e.g. "team_1", "team_2")
+#' @return given data frame with one extra column by team
+#' @export
+pubweb_add_team_columns = function(.db, recode=TRUE, col_prefix="team_") {
+  teams = unique(unlist(.db$equipes))
+  if(recode) {
+    labeller = iplespBib::recode_team
+  } else {
+    labeller = identity
+  }
+  team_label = paste0(col_prefix, tolower(labeller(teams)))
+  for(i in seq_along(teams)) {
+    col_name = team_label[i]
+    team = teams[i]
+    .db[[col_name]] = sapply(.db$equipes, \(x) team %in% x)
+  }
+  names(team_label) <- teams
+  attr(.db, "team_columns") <- team_label
+  .db
+}
+
