@@ -12,7 +12,7 @@
 config = rlang::new_environment(list(
   cache_dir = NULL,
   root_url = "https://pubweb.iplesp.fr",
-  teams = c('SUMO'=1L,'CLEPIVIR'=2L,'THERAVIR'=4L,'EPAR'=5L,'PEPITES'=6L,'ERES'=7L,'NEMESIS'=10L, 'CIPHOD'=11L)
+  teams = c('SUMO'=1L,'CLEPIVIR'=2L,'THERAVIR'=4L,'EPAR'=5L,'PEPITES'=6L,'ESSMA'=7L,'NEMESIS'=10L, 'CIPHOD'=11L)
 ))
 
 set_root_url = function(value) {
