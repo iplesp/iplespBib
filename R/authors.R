@@ -28,7 +28,18 @@ pubweb_authors = function(.db, with=c()) {
     dplyr::if_else(is.na(x), FALSE, x)
   }
 
-  authors = authors %>% dplyr::mutate_at(c('iplesp','wild','corresp','group', 'equal'), fill_na)
+  # Properties to recode
+  props = c('iplesp','wild','corresp','group', 'equal')
+
+  missing.props = props[!props %in% names(authors)]
+
+  props = props[props %in% names(authors)]
+
+  authors = authors %>% dplyr::mutate_at(props, fill_na)
+
+  if(length(missing.props) > 0) {
+    authors[, missing.props] = FALSE
+  }
 
   authors
 }
