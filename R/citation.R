@@ -43,6 +43,7 @@ pub_to_bib = function(p) {
 #' @param p data.frame row of a publication table
 #' @param authorlist all, first or "first_last"
 #' @returns character string of citation
+#' @export
 format_citation = function(p, authorlist="all") {
 
   not_empty = \(x) !is.null(x) && x != ""
