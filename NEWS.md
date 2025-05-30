@@ -1,6 +1,11 @@
+
+# iplespBib 0.3.1
+
+* fix `format_citation()` when some value are NA
+
 # iplespBib 0.3.0
 
-* add `format_citation` to create a citation from pub line
+* add `format_citation()` to create a citation from pub line
 * Fix authors extraction when some properties are missing in the provided data
 
 # iplespBib 0.2.0

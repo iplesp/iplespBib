@@ -46,7 +46,7 @@ pub_to_bib = function(p) {
 #' @export
 format_citation = function(p, authorlist="all") {
 
-  not_empty = \(x) !is.null(x) && x != ""
+  not_empty = \(x) !is.null(x) && !is.na(x) && x != ""
 
   parts = c()
 
