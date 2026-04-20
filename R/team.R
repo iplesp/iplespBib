@@ -46,12 +46,18 @@ team_combinations = function(.db, without_team=NULL) {
   mc
 }
 
-#' Recode team
+#' Recode team to factor (team acronym) from numerical value
 #' @param x team value as numerical code
 #' @return factor with team label as level
 #' @export
 recode_team = function(x) {
   teams = config$teams
+  u = unique(x)
+  u = u[!u %in% teams]
+  if(length(u) > 0) {
+    names(u) = paste0("TEAM", u)
+    teams = c(teams, u)
+  }
   factor(x, levels = teams, names(teams))
 }
 
@@ -92,4 +98,3 @@ pubweb_add_team_columns = function(.db, recode=TRUE, col_prefix="team_") {
   attr(.db, "team_columns") <- team_label
   .db
 }
-
