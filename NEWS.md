@@ -1,3 +1,6 @@
+# iplespBib 0.3.2
+
+* fix `recode_team()` to handle non existent team id, generating team label instead of returning NA
 
 # iplespBib 0.3.1
 
