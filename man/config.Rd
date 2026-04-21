@@ -6,10 +6,14 @@
 \title{Configuration
 \describe{
 \item{root_url}{Root of the pubweb database site}
+\item{cache_dir}{Directory where to place cache files (loaded from server)}
+\item{curl_verbose}{Show verbose output when loading data from server}
+\item{curl_insecure}{Disable certificate check when loaded data from server}
+\item{records_page_size}{Number of records to load from the server at each step}
 \item{teams}{vector of int, List of teams with numerical code as value, and team label as name}
 }}
 \format{
-An object of class \code{environment} of length 3.
+An object of class \code{environment} of length 7.
 }
 \usage{
 config
@@ -18,6 +22,10 @@ config
 Configuration
 \describe{
 \item{root_url}{Root of the pubweb database site}
+\item{cache_dir}{Directory where to place cache files (loaded from server)}
+\item{curl_verbose}{Show verbose output when loading data from server}
+\item{curl_insecure}{Disable certificate check when loaded data from server}
+\item{records_page_size}{Number of records to load from the server at each step}
 \item{teams}{vector of int, List of teams with numerical code as value, and team label as name}
 }
 }

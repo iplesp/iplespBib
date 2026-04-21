@@ -4,10 +4,10 @@
 \alias{pubweb_load_db}
 \title{Load Pubweb databases}
 \usage{
-pubweb_load_db(ttl = 3600L * 3L)
+pubweb_load_db(ttl = NA)
 }
 \arguments{
-\item{ttl}{int cache time (if 0 will disable cache)}
+\item{ttl}{int cache time (if 0 will disable cache, NA will use default)}
 }
 \description{
 Load Pubweb databases

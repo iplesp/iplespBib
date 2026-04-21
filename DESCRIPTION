@@ -1,22 +1,24 @@
 Package: iplespBib
 Title: Manage Iplesp Bibliography database
-Version: 0.3.1
+Version: 0.4.0
 Authors@R: 
     person(given = "Turbelin",
            family = "Clément",
            role = c("aut", "cre"),
            email = "clement.turbelin@upmc.fr",
            comment = c(ORCID = "0000-0002-5074-9541"))
-Description: What the package does (one paragraph).
+Description: iplespBib loads data from Pubweb Bibliography data and cleanup data. It provides helper function to facilitate data analysis.
 License: CC BY 4.0
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
+Depends: 
+  R (>= 4.1)
 Imports: 
-    curl,
-    jsonlite,
-    rlang,
-	dplyr,
-	tidyr,
-	rappdirs
+  curl (>= 6.0),
+  jsonlite (>= 2.0),
+  rlang (>= 1.1),
+	dplyr (>= 1.1),
+	tidyr (>= 1.3),
+	rappdirs (>= 0.3)

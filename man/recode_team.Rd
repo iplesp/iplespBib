@@ -2,7 +2,7 @@
 % Please edit documentation in R/team.R
 \name{recode_team}
 \alias{recode_team}
-\title{Recode team}
+\title{Recode team to factor (team acronym) from numerical value}
 \usage{
 recode_team(x)
 }
@@ -13,5 +13,5 @@ recode_team(x)
 factor with team label as level
 }
 \description{
-Recode team
+Recode team to factor (team acronym) from numerical value
 }

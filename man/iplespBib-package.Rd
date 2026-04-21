@@ -7,7 +7,7 @@
 \title{IplespBib package
 Load Bibliography database from Iplesp Database}
 \description{
-What the package does (one paragraph).
+iplespBib loads data from Pubweb Bibliography data and cleanup data. It provides helper function to facilitate data analysis.
 }
 \author{
 \strong{Maintainer}: Turbelin Clément \email{clement.turbelin@upmc.fr} (\href{https://orcid.org/0000-0002-5074-9541}{ORCID})
